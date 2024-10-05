@@ -24,3 +24,12 @@ function generatePrimes(quota) {
 
 const quota = document.querySelector("#quota");
 const output = document.querySelector("#output");
+
+document.querySelector("#generate").addEventListener("click", () => {
+    const primes = generatePrimes(quota.value);
+    output.textContent = `Finished generating ${quota.value} primes!`
+});
+
+document.querySelector("#reload").addEventListener("click", () => {
+    document.location.reload();
+});
